@@ -5,6 +5,8 @@
 
   This is a Node.js command-line application that asked the user what shape, color, and text the user wants and then takes that data in order to generate a logoand save it as an svg file.
 
+  ![link to walkthrough video](https://drive.google.com/file/d/1hcs03Zn4yPyk2Qlzz1yCzpxhUQ1DK1Zg/view)
+
   ## Table of Contents
 
   - [Installation](#installation)
