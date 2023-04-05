@@ -1,6 +1,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const shape = require('./lib/shapes')
+const CircleTemp = require('./lib/circle');
+const TriangleTemp = require('./lib/triangle');
+const SquareTemp =require('./lib/square');
 
 inquirer
   .prompt([
@@ -28,10 +30,26 @@ inquirer
   ])
 
   .then((data) => {
-    const svgTemplate = shape(data)
+    //const svgTemplate = shape(data)
+    if(data.shape === 'circle') {
+      const svgTemplate = new CircleTemp(data);
+      
+      fs.writeFile('logo.svg', svgTemplate.render(), (err) => 
+      err ? console.log(err) : console.log('Generated logo.svg')
+      );
+    } else if (data.shape === 'triangle') {
+      const svgTemplate = new TriangleTemp(data);
 
-    fs.writeFile('logo.svg', svgTemplate, (err) => 
-    err ? console.log(err) : console.log('Generated logo.svg')
-    );
-  })
+      fs.writeFile('logo.svg', svgTemplate.render(), (err) => 
+      err ? console.log(err) : console.log('Generated logo.svg')
+      );
+    } else if (data.shape === 'square') {
+      const svgTemplate = new SquareTemp(data);
+
+      fs.writeFile('logo.svg', svgTemplate.render(), (err) => 
+      err ? console.log(err) : console.log('Generated logo.svg')
+      );
+    };
+    
+  });
 
