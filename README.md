@@ -7,6 +7,14 @@
 
   ![link to walkthrough video](https://drive.google.com/file/d/1hcs03Zn4yPyk2Qlzz1yCzpxhUQ1DK1Zg/view)
 
+  ![Jest documentation](https://jestjs.io/docs/using-matchers)
+
+  ![Inquirer documentation](https://www.npmjs.com/package/inquirer#methods)
+
+  ## Resources
+
+  ![Mozilla tutorial on svg](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started)
+
   ## Table of Contents
 
   - [Installation](#installation)
