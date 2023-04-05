@@ -30,23 +30,24 @@ inquirer
   ])
 
   .then((data) => {
-    //const svgTemplate = shape(data)
     if(data.shape === 'circle') {
       const svgTemplate = new CircleTemp(data);
       
-      fs.writeFile('logo.svg', svgTemplate.render(), (err) => 
+      fs.writeFile('logo.svg', svgTemplate.render(data), (err) => 
       err ? console.log(err) : console.log('Generated logo.svg')
       );
+
     } else if (data.shape === 'triangle') {
       const svgTemplate = new TriangleTemp(data);
 
-      fs.writeFile('logo.svg', svgTemplate.render(), (err) => 
+      fs.writeFile('logo.svg', svgTemplate.render(data), (err) => 
       err ? console.log(err) : console.log('Generated logo.svg')
       );
+
     } else if (data.shape === 'square') {
       const svgTemplate = new SquareTemp(data);
 
-      fs.writeFile('logo.svg', svgTemplate.render(), (err) => 
+      fs.writeFile('logo.svg', svgTemplate.render(data), (err) => 
       err ? console.log(err) : console.log('Generated logo.svg')
       );
     };
